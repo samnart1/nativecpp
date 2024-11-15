@@ -1,12 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import ErrorExample from './01-useState/01-error-example'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return <h1>My First Vite Project</h1>
+  return <>
+    <ErrorExample/>
+  </>
 }
 
 export default App
