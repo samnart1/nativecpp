@@ -5,6 +5,7 @@ import UseExample from './01-useState/useStateExample'
 import UseObject from './01-useState/useState-object'
 import EffectExample from './02-useEffect/useEffect-example'
 import FetchData from './02-useEffect/fetchEffect'
+import MultiReturns from './03-multipleReturns/multiReturns'
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <UseExample /> */}
       {/* <UseObject /> */}
       {/* <EffectExample /> */}
-      <FetchData />
+      {/* <FetchData /> */}
+      <MultiReturns />
     </>
   )
 }
