@@ -8,6 +8,7 @@ import FetchData from './02-useEffect/fetchEffect'
 import MultiReturns from './03-multipleReturns/multiReturns'
 import Challenge from './03-multipleReturns/userChallenge'
 import Navbar from './04-projectStructure/Navbar'
+import List from './05-leverage-js/List'
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       {/* <FetchData /> */}
       {/* <MultiReturns /> */}
       {/* <Challenge /> */}
-      <Navbar />
+      {/* <Navbar /> */}
+      <List />
     </>
   )
 }
