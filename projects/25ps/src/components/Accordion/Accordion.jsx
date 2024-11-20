@@ -16,7 +16,7 @@ const Accordion = () => {
     if (multi === -1) {
       copyList.push(id)
     } else {
-      copyList.splice(id, 1)
+      copyList.splice(multi, 1)
     }
     setMultiple(copyList)
   }
