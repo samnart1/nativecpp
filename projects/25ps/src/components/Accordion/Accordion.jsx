@@ -3,60 +3,56 @@ import data from './data'
 
 const Accordion = () => {
   const [selected, setSelected] = useState(null)
-  const [btnToggleMulti, setBtnToggleMulti] = useState(false)
-  const [multi, setMulti] = useState([])
+  const [btnMultiSelect, setBtnMultiSelect] = useState(false)
+  const [multiSelected, setMultiSelected] = useState([])
 
   const singleSelect = (id) => {
     setSelected(selected === id ? null : id)
-    console.log(selected)
   }
 
   const multiSelect = (id) => {
-    let multiList = [...multi]
-    const findCurrentId = multiList.indexOf(id)
-    if (findCurrentId === -1) {
-      multiList.push(id)
-    } else {
-      multiList.splice(findCurrentId, 1)
-    }
-    setMulti(multiList)
+    let copyList = [...multiSelected]
+    const currentId = copyList.indexOf(id)
+    if (currentId === -1) copyList.push(id)
+    else copyList.splice(currentId, 1)
+    setMultiSelected(copyList)
   }
 
-  // console.log(singleSelect)
   // console.log(selected)
+  // console.log(btnMultiSelect)
 
   return (
     <div>
-      <button onClick={() => setBtnToggleMulti(!btnToggleMulti)}>
-        {btnToggleMulti ? (
-          <>Toggle Single Selection</>
-        ) : (
-          <>Toggle Multi Selection</>
-        )}
+      <button onClick={() => setBtnMultiSelect(!btnMultiSelect)}>
+        Toggle MultiSelect
       </button>
+
       <div>
         {data && data.length > 0 ? (
           data.map((dataItem) => (
-            <div key={dataItem.id}>
-              <div
-                onClick={
-                  btnToggleMulti
-                    ? () => multiSelect(dataItem.id)
-                    : () => singleSelect(dataItem.id)
-                }
-              >
+            <div
+              key={dataItem.id}
+              onClick={
+                btnMultiSelect
+                  ? () => multiSelect(dataItem.id)
+                  : () => singleSelect(dataItem.id)
+              }
+            >
+              <div>
                 <h2>{dataItem.question}</h2>
                 <span>+</span>
               </div>
-              {btnToggleMulti
-                ? multi.indexOf(dataItem.id) !== -1 && (
-                    <div>{dataItem.answer}</div>
+              {btnMultiSelect
+                ? multiSelected.indexOf(dataItem.id) !== -1 && (
+                    <p>{dataItem.answer}</p>
                   )
-                : selected === dataItem.id && <div>{dataItem.answer}</div>}
+                : selected === dataItem.id && <p>{dataItem.answer}</p>}
             </div>
           ))
         ) : (
-          <h2>No Data Was Found!!!</h2>
+          <div>
+            <h2>Data is not found!!!</h2>
+          </div>
         )}
       </div>
     </div>
