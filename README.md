@@ -49,7 +49,7 @@ TITAN - The Intelligence That Almost Nailed-it
 - [ ] Learn TensorRT (NVIDIA)
 - [ ] Deploy models to Jetson Nano
 - [ ] Add voice + vision modules
-- [ ] Multimodal Kai (Camera + Mic + Sensors)
+- [ ] Multimodal TITAN (Camera + Mic + Sensors)
 
 ---
 
@@ -66,6 +66,6 @@ TITAN - The Intelligence That Almost Nailed-it
 - [ ] Reinforcement Learning for robotics
 - [ ] Probabilistic filters (Kalman/Particle)
 - [ ] Self-learning robot arm
-- [ ] Fully autonomous Kai assistant
+- [ ] Fully autonomous TITAN assistant
 
 ---
