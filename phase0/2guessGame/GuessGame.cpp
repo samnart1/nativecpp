@@ -28,7 +28,7 @@ void Guess_Game::displayWelcome() {
 int Guess_Game::getValidGuess() {
     int guess;
     while (true) {
-        cout << "Enter your guess ( " << minRange << " - " << maxRange << " ): "; 
+        cout << "Enter your guess ( " << minRange << " - " << maxRange << " ): \n"; 
 
         if (cin >> guess) {
             if (guess >= minRange && guess <= maxRange) {
@@ -44,4 +44,79 @@ int Guess_Game::getValidGuess() {
     }
 }
 
-void Guess_Game::giveFeedback(int guess) {}
+void Guess_Game::giveFeedback(int guess) {
+    int difference = abs(guess - secretNumber);
+
+    if (guess == secretNumber) {
+        return;
+    } else if (guess < secretNumber) {
+        cout << "Too low\n";
+    } else {
+        cout << "Too high\n";
+    }
+
+    if (difference <= 5) {
+        cout << "You're very close! \n";
+    } else if (difference <= 17) {
+        cout << "Getting warmer! \n";
+    } else {
+        cout << "Still far away ...\n";
+    }
+}
+
+bool Guess_Game::playGame() {
+    displayWelcome();
+
+    while (attempts < maxAttempts) {
+        cout << "\nAttemps: " << attempts << "/" << maxAttempts << '\n' << endl;
+        attempts++;
+        
+        int guess = getValidGuess();
+        
+        if (guess == secretNumber) {
+            cout << "\nCongratulations! You guessed it!\n";
+            cout << "The number was " << secretNumber << '\n';
+            cout << "You solved it in " << attempts << " attemp(s)!" << '\n';
+            
+            if (attempts <= 3) {
+                cout << "Excellent! You're a guessing master!\n";
+            } else if (attempts <= 5) {
+                cout << "Good work! Well done!\n";
+            } else {
+                cout << "Good work! You made it!\n";
+            }
+            return true;
+        } else {
+            giveFeedback(guess);
+
+            int remaining = maxAttempts - attempts;
+            if (remaining > 0) {
+                cout << "Attempts remaining: " << remaining << '\n';
+            }
+        }
+    }
+
+    cout << "\nGame Over! You've used all " << maxAttempts << " attempts\n";
+    cout << "The secret number was: " << secretNumber << '\n';
+    cout << "Better luck next time!\n";
+    return false;
+}
+
+bool Guess_Game::playAgain() {
+    char choice;
+    while (true) {
+        cout << "\nWould you like to play again? (y/n): \n";
+        cin >> choice;
+        choice = tolower(choice);
+
+        if (choice == 'y') {
+            attempts = 0;
+            generateSecretNumber();
+            return true;
+        } else if (choice == 'n') {
+            return false;
+        } else {
+            cout << "Please enter 'y' for yes or 'n' for no.\n";
+        }
+    }
+}
