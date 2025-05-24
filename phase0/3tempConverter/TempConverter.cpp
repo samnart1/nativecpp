@@ -94,3 +94,27 @@ void TempConverter::displayResult(double inputTemp, double convertedTemp, Temper
     }
 }
 
+void TempConverter::displayTemperatureContext(double celsius) {
+    cout << "\n Temperature Context:\n";
+
+    if (celsius < -40) {
+        cout << "Extremely cold! Colder than Antarctica in winter.\n";
+    } else if (celsius < 0) {
+        cout << "Below freezing - water turns into ice or something.\n";
+    } else if (celsius < 10) {
+        cout << "Cold - you need a heavy jacket\n";
+    } else if (celsius < 20) {
+        cout << "Much better and comfortable\n";
+    } else if (celsius < 30) {
+        cout << "warm and pleasant, not too hot\n";
+    } else if (celsius < 40) {
+        cout << "hot, stay liquidy\n";
+    } else {
+        cout << "extremely hot for humans - be very careful";
+    }
+
+    if (abs(celsius - 37) < 1) {
+        cout << "Close to normal body temperature";
+    }
+}
+
