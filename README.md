@@ -1,29 +1,29 @@
-# 🚀 C++ Project Base Learning
+# C++ Projects
 
 A structured roadmap of **system-level and networking projects** in C++.  
 From beginner-level socket programming to building mini distributed systems, RPC, proxies, and even operating system components.
 
 ---
 
-## 📌 Progression Path
+## Progression Path
 
 > **Basic sockets** → **Protocols** → **Concurrency & OS internals** → **Frameworks (HTTP/gRPC)** → **Distributed Systems**
 
 ---
 
-## 📚 Tiers Overview
+## Tiers Overview
 
-- 🔹 **Tier 1: Beginner** — Warm-ups, sockets, basic threads, CLI tools
-- 🔸 **Tier 2: Intermediate** — Multithreading, custom protocols, memory allocators
-- 🔶 **Tier 3: Advanced** — Asynchronous I/O, load balancers, distributed KV stores
-- 🟦 **Tier 4: Expert** — Protocol implementations, distributed coordination, OS concepts
-- 🟥 **Tier 5: Mastery** — High-performance systems, CDN, tracing, distributed databases
+- **Tier 1: Beginner** — Warm-ups, sockets, basic threads, CLI tools
+- **Tier 2: Intermediate** — Multithreading, custom protocols, memory allocators
+- **Tier 3: Advanced** — Asynchronous I/O, load balancers, distributed KV stores
+- **Tier 4: Expert** — Protocol implementations, distributed coordination, OS concepts
+- **Tier 5: Mastery** — High-performance systems, CDN, tracing, distributed databases
 
 ---
 
-## ✅ Project Tracker
+## Project Tracker
 
-### 🔹 Tier 1: Beginner System & Networking (Warm-ups)
+### Tier 1: Beginner System & Networking (Warm-ups)
 
 <details>
 <summary>Click to expand</summary>
@@ -48,7 +48,7 @@ From beginner-level socket programming to building mini distributed systems, RPC
 
 ---
 
-### 🔸 Tier 2: Intermediate System & Networking
+### Tier 2: Intermediate System & Networking
 
 <details>
 <summary>Click to expand</summary>
@@ -78,7 +78,7 @@ From beginner-level socket programming to building mini distributed systems, RPC
 
 ---
 
-### 🔶 Tier 3: Advanced Networking & System Concepts
+### Tier 3: Advanced Networking & System Concepts
 
 <details>
 <summary>Click to expand</summary>
@@ -108,7 +108,7 @@ From beginner-level socket programming to building mini distributed systems, RPC
 
 ---
 
-### 🟦 Tier 4: Expert-Level (Protocols, OS, Distributed)
+### Tier 4: Expert-Level (Protocols, OS, Distributed)
 
 <details>
 <summary>Click to expand</summary>
@@ -143,7 +143,7 @@ From beginner-level socket programming to building mini distributed systems, RPC
 
 ---
 
-### 🟥 Tier 5: Master-Level Projects
+### Tier 5: Master-Level Projects
 
 <details>
 <summary>Click to expand</summary>
