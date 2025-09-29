@@ -52,7 +52,7 @@ int main() {
 
         if (message == "exit") {
             std::cout << "Closing connection...\n";
-            break;
+            break;  
         }
 
         //receive response
